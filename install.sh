@@ -135,7 +135,7 @@ if [[ $(docker volume ls -q --filter name=sentry-postgres) && $(docker run --rm 
     docker run --rm \
     -v sentry-postgres:/var/lib/postgresql/9.5/data \
     -v sentry-postgres-new:/var/lib/postgresql/9.6/data \
-    tianon/postgres-upgrade:9.5-to-9.6
+    tianon/postgres-upgrade:9.5-to-12
 
     # Get rid of the old volume as we'll rename the new one to that
     docker volume rm sentry-postgres
